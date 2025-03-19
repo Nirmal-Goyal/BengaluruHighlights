@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Bengaluru Highlights</title>
+
+    <style type="text/css">
+        /* header styling */
+        header {
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            padding: 10px 0;
+            border-radius: 10px;
+        }
+
+        /* card styling */
+        section{
+            margin: 100px;
+        }
+
+        .card-group {
+            gap: 20px;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 320px;
+            height: 450px;
+            border-radius: 10px;
+            margin: auto;
+        }
+
+        .card-inner {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 1s;
+        }
+
+        .card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-front, .card-back {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-front img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-back {
+            background: #15293e;
+            color: white;
+            text-align: center;
+            transform: rotateY(180deg);
+            padding: 20px;
+        }
+
+        .card a {
+            text-decoration: none;
+            color: #f4d03f;
+            font-weight: bold;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 24px;
+            }
+            section {
+                margin: 20px;
+            }
+            .card {
+                height: 350px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 20px;
+            }
+            .card {
+                height: 300px;
+            }
+            footer h5 {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body class="container-fluid">
+
+    <!-- Header part -->
+    <header style="background: linear-gradient(45deg, #15293e, #007bff); color: white;">
+        <nav class="container">
+            <div class="row text-center align-items-center">
+
+                <!-- Heading part -->
+                <div class="col-12 mb-2">
+                    <h1 style="text-shadow: 10px 10px 15px rgba(0, 0, 0, 0.7);">Bengaluru.highlights</h1>
+                </div>
+
+                <!-- Places dropdown -->
+                <div class="col-12 col-md-4 mb-2">
+                    <select class="form-select">
+                        <option>Select Places</option>
+                        <option value="cubbon park">Cubbon Park</option>
+                        <option value="chinnaswami stadium">Chinnaswami Stadium</option>
+                        <option value="lalbagh">Bengaluru Palace</option>
+                    </select>
+                </div>
+
+                <!-- Search bar -->
+                <div class="col-12 col-md-4 mb-2">
+                    <form action="" class="input-group">
+                        <input type="search" placeholder="Search..." class="form-control">
+                        <button class="btn btn-info">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Content part -->
+    <section class="container">
+        <div class="row justify-content-center">
+            <!-- Cubbon Park Card -->
+            <div class="col-12 col-md-4 d-flex justify-content-center">
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="public/images/Cubbon Park.jpeg" alt="Cubbon Park">
+                        </div>
+                        <div class="card-back">
+                            <h2>CUBBON PARK</h2>
+                            <br><br>
+                            <a href="src/cubbonPark.html">Check out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chinnaswami Stadium Card -->
+            <div class="col-12 col-md-4 d-flex justify-content-center">
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="public/images/Chinnaswami stadium.jpeg" alt="Chinnaswami Stadium">
+                        </div>
+                        <div class="card-back">
+                            <h2>CHINNASWAMI STADIUM</h2>
+                            <br><br>
+                            <a href="src/chinnaswamiStadium.html">Check out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bengaluru Palace Card -->
+            <div class="col-12 col-md-4 d-flex justify-content-center">
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="public/images/BengaluruPalace.jpeg" alt="Bengaluru Palace">
+                        </div>
+                        <div class="card-back">
+                            <h2>BENGALURU PALACE</h2>
+                            <br><br>
+                            <a href="src/bengaluruPalace.html">Check out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer part -->
+    <footer class="p-2 mt-5" 
+    style="background: linear-gradient(45deg, #15293e, #007bff); color: white;">
+        <div class="container text-center">
+            <h5>Bengaluru Highlights</h5>
+            <p>Explore the beauty and charm of Bengaluru like never before!</p>
+            <p>Contact us: <a href="mailto:info@bengaluruhighlights.com" class="text-light">info@bengaluruhighlights.com</a></p>
+            <p>
+                <a href="#" class="text-light"><span class="bi bi-facebook mx-2"></span></a>
+                <a href="#" class="text-light"><span class="bi bi-instagram mx-2"></span></a>
+                <a href="#" class="text-light"><span class="bi bi-twitter-x mx-2"></span></a>
+            </p>
+            <p>&copy; 2025 Bengaluru Highlights | All rights reserved</p>
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-1CmrxMRARb6aJd6RMmc8bJ9nB0bOqQ8U5Ar8nINJ6K47nICp1enxm85aCd4Dr4p8" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

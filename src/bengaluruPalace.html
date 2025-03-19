@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Bengaluru Palace</title>
+    <style type="text/css">
+        body {
+            background: linear-gradient(280deg, #dfffd6, #a8e6cf, #6f2da8, #f4d03f);
+            background-size: 400% 400%;
+            font-family: Arial;
+            animation: gradientAnimation 7s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        h1{
+            font-size: 50px;
+            color: #6f2da8;
+            text-align: center;
+            margin-top: 20px;
+            text-shadow: 2px 4px 8px #9b59b6;
+        }
+        .gallery-container{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin-top: 75px;
+        }
+        .card{
+            width: 300px;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+            transition: transform 0.8s ease;
+        }
+        .card img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .card:hover{
+            transform: translateZ(20px) scale(1.05);
+        }
+        .info-container{
+            margin: 50px;
+            text-align: center;
+        }
+        .info-section{
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid  #f4d03f;
+            border-radius: 10px;
+            width: 75%;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>BENGALURU PALACE</h1>
+
+    <div class="gallery-container">
+        <div class="card">
+            <img src="../Public/images/BP1.jpeg">
+        </div>
+        <div class="card">
+            <img src="../Public/images/BP2.jpeg">
+        </div>
+        <div class="card">
+            <img src="../Public/images/BP3.jpeg">
+        </div>
+    </div>
+
+    <div class="info-container">
+        <button class="btn btn-danger" data-bs-toggle="collapse" data-bs-target="#history">History</button>
+        <button class="btn btn-success" data-bs-toggle="collapse" data-bs-target="#attractions">Architecture</button>
+        <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#activities">Activities</button>
+    </div>
+
+    <div class="collapse info-section" id="history">
+        <h2>History of Bengaluru Palace</h2>
+        <p>Built in 1887, Bengaluru Palace was originally constructed by Rev. J. Garrett and later acquired by the Wadiyar family in 1920. The palace is a testament to the grandeur of royal life in Bangalore and reflects a blend of Tudor, Scottish Gothic, and Victorian architecture.</p>
+    </div>
+
+    <div class="collapse info-section" id="attractions">
+        <h2>Architectural Highlights</h2>
+        <p>The palace is renowned for its Tudor-style architecture with magnificent woodwork, arches, stained glass windows, and sprawling gardens. The interiors are lavish, with intricate wood carvings and vintage furniture that reflect the royal heritage.</p>
+    </div>
+
+
+    <div class="collapse info-section" id="activities">
+        <h2>Activities at Bengaluru Palace</h2>
+        <p>Visitors can explore the royal interiors, enjoy the palace grounds, and even attend cultural events and concerts held in the palace premises. The palace also serves as a venue for various exhibitions and gatherings.</p>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

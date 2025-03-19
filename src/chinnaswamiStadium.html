@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Chinnaswami Stadium</title>
+    <style type="text/css">
+        body {
+            background: linear-gradient(270deg, #dfffd6, #a8e6cf, #f39c12, #e67e22);
+            background-size: 400% 400%;
+            font-family: Arial;
+            animation: gradientAnimation 7s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        h1{
+            font-size: 50px;
+            color: #f39c12;
+            text-align: center;
+            margin-top: 20px;
+            text-shadow: 5px 5px 10px #e67e22;
+        }
+        .gallery-container{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin-top: 75px;
+        }
+        .card{
+            width: 300px;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+            transition: transform 0.8s ease;
+        }
+        .card img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .card:hover{
+            transform: translateZ(20px) scale(1.05);
+        }
+        .info-container{
+            margin: 50px;
+            text-align: center;
+        }
+        .info-section{
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #2e8b57;
+            border-radius: 10px;
+            width: 75%;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>CHINNASWAMI STADIUM</h1>
+
+    <div class="gallery-container">
+        <div class="card">
+            <img src="../Public/images/CS1.jpeg">
+        </div>
+        <div class="card">
+            <img src="../Public/images/CS2.jpeg">
+        </div>
+        <div class="card">
+            <img src="../Public/images/CS3.jpeg">
+        </div>
+    </div>
+
+    <div class="info-container">
+        <button class="btn btn-danger" data-bs-toggle="collapse" data-bs-target="#history">History</button>
+        <button class="btn btn-success" data-bs-toggle="collapse" data-bs-target="#attractions">Attractions</button>
+        <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#activities">Activities</button>
+    </div>
+
+    <div class="collapse info-section" id="history">
+        <h2>History of Chinnaswamy Stadium</h2>
+        <p>Built in 1969, the M. Chinnaswamy Stadium is one of India's premier cricket venues. It is named after M. Chinnaswamy, who served as the President of the Board of Control for Cricket in India (BCCI). The stadium has hosted numerous iconic international matches and is home to the IPL team Royal Challengers Bangalore.</p>
+    </div>
+
+    <div class="collapse info-section" id="attractions">
+        <h2>Main Attractions</h2>
+        <p>The stadium is known for its electric atmosphere during IPL matches, especially when RCB plays. It also boasts eco-friendly initiatives like solar panels, lush green seating zones, and the iconic Pavilion End.</p>
+    </div>
+
+
+    <div class="collapse info-section" id="activities">
+        <h2>Activities at Chinnaswamy Stadium</h2>
+        <p>Visitors can enjoy live cricket matches, stadium tours, and immersive cricket experiences. On non-match days, it’s a hub for fitness enthusiasts running around the outer track.</p>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
