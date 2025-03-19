@@ -25,6 +25,23 @@
             margin-top: 20px;
             text-shadow: 2px 4px 8px #9b59b6;
         }
+        .home-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 10px 20px;
+            background-color: #6f2da8;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .home-btn:hover {
+            background-color: #9b59b6;
+        }
         .gallery-container{
             display: flex;
             align-items: center;
@@ -61,11 +78,35 @@
             margin-right: auto;
             background-color: rgba(0, 0, 0, 0.5);
         }
+        /* Responsive Tweaks */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 32px;
+            }
+
+            .card {
+                width: 100%;
+                height: auto;
+            }
+
+            .info-section {
+                width: 100%;
+            }
+
+            .home-btn {
+                padding: 5px 10px;
+            }
+        }
         
     </style>
 </head>
 <body>
+    <!-- Title -->
     <h1>BENGALURU PALACE</h1>
+
+    <!-- Home Button (Top-Right) -->
+    <a href="../index.html" class="home-btn">Home</a>
+
 
     <div class="gallery-container">
         <div class="card">
